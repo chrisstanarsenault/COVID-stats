@@ -413,19 +413,19 @@ function IndexPage() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return convertDate; });
 function convertDate(apiDate) {
-  let d = new Date(apiDate);
-  let date = d.getDate();
-  let month = d.getMonth() + 1;
-  let year = d.getFullYear();
+  let d = apiDate;
+  let date = d.substring(8, 10);
+  let month = parseInt(d.substring(5, 7));
+  let year = d.substring(0, 4);
   let dateStr = `${pickMonth(month)} ${date}, ${year}`;
   return dateStr;
 }
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 function pickMonth(monthNum) {
-  for (let i = 1; i <= months.length; i++) {
+  for (let i = 0; i < months.length - 1; i++) {
     if (monthNum === i) {
-      return months[i];
+      return months[i - 1];
     }
   }
 }

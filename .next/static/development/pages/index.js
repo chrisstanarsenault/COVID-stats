@@ -4572,19 +4572,19 @@ function IndexPage() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return convertDate; });
 function convertDate(apiDate) {
-  var d = new Date(apiDate);
-  var date = d.getDate();
-  var month = d.getMonth() + 1;
-  var year = d.getFullYear();
+  var d = apiDate;
+  var date = d.substring(8, 10);
+  var month = parseInt(d.substring(5, 7));
+  var year = d.substring(0, 4);
   var dateStr = "".concat(pickMonth(month), " ").concat(date, ", ").concat(year);
   return dateStr;
 }
 var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 function pickMonth(monthNum) {
-  for (var i = 1; i <= months.length; i++) {
+  for (var i = 0; i < months.length - 1; i++) {
     if (monthNum === i) {
-      return months[i];
+      return months[i - 1];
     }
   }
 }
