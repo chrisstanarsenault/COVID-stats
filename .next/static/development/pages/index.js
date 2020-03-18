@@ -35,58 +35,57 @@ function CountrySelector() {
   if (!countries) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 10
     },
     __self: this
   }, "Loading...");
   if (loading) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 11
     },
     __self: this
   }, "Loading...");
   if (error) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 12
     },
     __self: this
   }, "Loading...");
-  console.log(countries);
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 15
     },
     __self: this
   }, __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 16
     },
     __self: this
   }, "Currently Showing ", selectedCountry), __jsx("select", {
     onChange: function onChange(e) {
       setSelectedCountry(e.target.value);
     },
+    value: selectedCountry,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 17
     },
     __self: this
-  }, Object.entries(countries.countries).map(function (_ref) {
+  }, Object.entries(countries.countries).map(function (_ref, index) {
     var _ref2 = Object(_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_ref, 2),
         country = _ref2[0],
         code = _ref2[1];
 
     return __jsx("option", {
-      selected: selectedCountry === countries.iso3[code],
-      key: code,
+      key: code + "-" + index,
       value: countries.iso3[code],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20
+        lineNumber: 21
       },
       __self: this
     }, country);
@@ -94,7 +93,7 @@ function CountrySelector() {
     url: "https://covid19.mathdro.id/api/countries/".concat(selectedCountry),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 24
     },
     __self: this
   }));
@@ -116,7 +115,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _utils_useStats__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/useStats */ "./utils/useStats.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _utils_convertTime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/convertTime */ "./utils/convertTime.js");
+/* harmony import */ var _utils_convertDate__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/convertDate */ "./utils/convertDate.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 
 var _jsxFileName = "/Users/irepair/Desktop/Dev/Web Dev/Projects/rona/components/Stats.js";
 
@@ -144,8 +145,10 @@ function _templateObject() {
 
 
 
-var StatGrid = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject());
-var StatBlock = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject2());
+
+
+var StatGrid = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].div(_templateObject());
+var StatBlock = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].div(_templateObject2());
 function Stats(_ref) {
   var url = _ref.url;
 
@@ -155,80 +158,80 @@ function Stats(_ref) {
   if (!stats) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 26
     },
     __self: this
   }, "Loading...");
   return __jsx(StatGrid, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 29
     },
     __self: this
   }, __jsx(StatBlock, {
     className: "statBlock",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 30
     },
     __self: this
   }, __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 31
     },
     __self: this
   }, "Confirmed:"), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 32
     },
     __self: this
   }, stats.confirmed.value)), __jsx(StatBlock, {
     className: "statBlock",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 35
     },
     __self: this
   }, __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 36
     },
     __self: this
   }, "Deaths:"), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 37
     },
     __self: this
   }, stats.deaths.value)), __jsx(StatBlock, {
     className: "statBlock",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 40
     },
     __self: this
   }, __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 41
     },
     __self: this
   }, "Recovered:"), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 42
     },
     __self: this
   }, stats.recovered.value)), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 45
     },
     __self: this
-  }, "Last Updated: ", stats.lastUpdate.substring(0, 10), " @ ", stats.lastUpdate.substring(11, 16)));
+  }, "Last Updated: ", Object(_utils_convertDate__WEBPACK_IMPORTED_MODULE_4__["default"])(stats.lastUpdate.substring(0, 10)), " @ ", Object(_utils_convertTime__WEBPACK_IMPORTED_MODULE_3__["default"])(stats.lastUpdate.substring(11, 16))));
 }
 
 /***/ }),
@@ -4542,6 +4545,76 @@ function IndexPage() {
 
 /***/ }),
 
+/***/ "./utils/convertDate.js":
+/*!******************************!*\
+  !*** ./utils/convertDate.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return convertDate; });
+function convertDate(apiDate) {
+  var d = new Date(apiDate);
+  var date = d.getDate();
+  var month = d.getMonth() + 1;
+  var year = d.getFullYear();
+  var dateStr = "".concat(pickMonth(month), " ").concat(date, ", ").concat(year);
+  return dateStr;
+}
+var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+function pickMonth(monthNum) {
+  for (var i = 1; i <= months.length; i++) {
+    if (monthNum === i) {
+      return months[i];
+    }
+  }
+}
+
+/***/ }),
+
+/***/ "./utils/convertTime.js":
+/*!******************************!*\
+  !*** ./utils/convertTime.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return convertTime; });
+function convertTime(apiTime) {
+  var time = apiTime; // your input
+
+  time = time.split(':'); // convert to array
+  // fetch
+
+  var hours = Number(time[0]);
+  var minutes = Number(time[1]);
+  var seconds = Number(time[2]); // calculate
+
+  var timeValue;
+
+  if (hours > 0 && hours <= 12) {
+    timeValue = "" + hours;
+  } else if (hours > 12) {
+    timeValue = "" + (hours - 12);
+  } else if (hours == 0) {
+    timeValue = "12";
+  }
+
+  timeValue += minutes < 10 ? ":0" + minutes : ":" + minutes; // get minutes
+  // timeValue += (seconds < 10) ? ":0" + seconds : ":" + seconds;  // get seconds
+
+  timeValue += hours >= 12 ? " P.M." : " A.M."; // get AM/PM
+
+  return timeValue;
+}
+
+/***/ }),
+
 /***/ "./utils/useStats.js":
 /*!***************************!*\
   !*** ./utils/useStats.js ***!
@@ -4572,8 +4645,6 @@ function useStats(url) {
       setError = _useState3[1];
 
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
-    console.log('Mounting or updating');
-
     function fetchData() {
       var data;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function fetchData$(_context) {
@@ -4582,20 +4653,19 @@ function useStats(url) {
             case 0:
               setLoading(true);
               setError();
-              console.log("Fetching Data");
-              _context.next = 5;
+              _context.next = 4;
               return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(fetch(url).then(function (res) {
                 return res.json();
               })["catch"](function (err) {
                 return setError(err);
               }));
 
-            case 5:
+            case 4:
               data = _context.sent;
               setStats(data);
               setLoading(false);
 
-            case 8:
+            case 7:
             case "end":
               return _context.stop();
           }

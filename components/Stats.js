@@ -1,4 +1,7 @@
 import useStats from '../utils/useStats';
+import convertTime from '../utils/convertTime';
+import convertDate from '../utils/convertDate';
+
 import styled from 'styled-components';
 
 const StatGrid = styled.div`
@@ -39,7 +42,7 @@ export default function Stats({url}) {
         <span>{stats.recovered.value}</span>
       </StatBlock>
 
-      <h2>Last Updated: {stats.lastUpdate.substring(0, 10)} @ {stats.lastUpdate.substring(11, 16)}</h2>
+      <h2>Last Updated: {convertDate(stats.lastUpdate.substring(0, 10))} @ {convertTime(stats.lastUpdate.substring(11, 16))}</h2>
     </StatGrid>
   )
 }

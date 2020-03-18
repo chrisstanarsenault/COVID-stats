@@ -3,3 +3,5 @@
 Global and country statics on confirmed and recovered cases as well as deaths.  Information is gathered using [Mathdro.id's API](https://covid19.mathdro.id/api).
 
 Built using NEXT and React.
+
+Can view directly at https://www.chris-covid-stats.netlify.com
