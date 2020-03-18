@@ -21,7 +21,7 @@ export default function convertTime(apiTime) {
   
   timeValue += (minutes < 10) ? ":0" + minutes : ":" + minutes;  // get minutes
   // timeValue += (seconds < 10) ? ":0" + seconds : ":" + seconds;  // get seconds
-  timeValue += (hours >= 12) ? " P.M." : " A.M.";  // get AM/PM
+  timeValue += (hours >= 12) ? " P.M. GMT" : " A.M. GMT";  // get AM/PM
 
   return timeValue;
   }

@@ -8,6 +8,8 @@ const StatGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
+
+  
 `;
 
 const StatBlock = styled.div`

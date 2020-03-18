@@ -214,6 +214,8 @@ const StatGrid = styled_components__WEBPACK_IMPORTED_MODULE_4___default.a.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
+
+  
 `;
 const StatBlock = styled_components__WEBPACK_IMPORTED_MODULE_4___default.a.div`
   background: #f2f2f2;
@@ -234,77 +236,77 @@ function Stats({
   if (!stats) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 28
     },
     __self: this
   }, "Loading...");
   return __jsx(StatGrid, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 31
     },
     __self: this
   }, __jsx(StatBlock, {
     className: "statBlock",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 32
     },
     __self: this
   }, __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 33
     },
     __self: this
   }, "Confirmed:"), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 34
     },
     __self: this
   }, stats.confirmed.value)), __jsx(StatBlock, {
     className: "statBlock",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 37
     },
     __self: this
   }, __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 38
     },
     __self: this
   }, "Deaths:"), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 39
     },
     __self: this
   }, stats.deaths.value)), __jsx(StatBlock, {
     className: "statBlock",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 42
     },
     __self: this
   }, __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 43
     },
     __self: this
   }, "Recovered:"), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 44
     },
     __self: this
   }, stats.recovered.value)), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 47
     },
     __self: this
   }, "Last Updated: ", Object(_utils_convertDate__WEBPACK_IMPORTED_MODULE_3__["default"])(stats.lastUpdate.substring(0, 10)), " @ ", Object(_utils_convertTime__WEBPACK_IMPORTED_MODULE_2__["default"])(stats.lastUpdate.substring(11, 16))));
@@ -445,7 +447,7 @@ function convertTime(apiTime) {
   timeValue += minutes < 10 ? ":0" + minutes : ":" + minutes; // get minutes
   // timeValue += (seconds < 10) ? ":0" + seconds : ":" + seconds;  // get seconds
 
-  timeValue += hours >= 12 ? " P.M." : " A.M."; // get AM/PM
+  timeValue += hours >= 12 ? " P.M. GMT" : " A.M. GMT"; // get AM/PM
 
   return timeValue;
 }
