@@ -9,7 +9,7 @@ const StatGrid = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
 
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     grid-template-columns: repeat(1, 1fr)
   }
 `;
@@ -24,7 +24,7 @@ const StatBlock = styled.div`
   justify-content: center;
   text-align: center;
 
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     font-size: 1.2rem;
     padding: 1rem;
   }

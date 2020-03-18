@@ -8,7 +8,7 @@ import Stats from './Stats';
 const SelectInput = styled.select`
   border: 1px solid black;
 
-  @media (max-width:400px) {
+  @media (max-width: 500px) {
     font-size: 16px;
     margin-bottom: 10px;
   }

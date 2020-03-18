@@ -24,7 +24,7 @@ var _jsxFileName = "/Users/irepair/Desktop/Dev/Web Dev/Projects/rona/components/
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 function _templateObject() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n  border: 1px solid black;\n\n  @media (max-width:400px) {\n    font-size: 16px;\n    margin-bottom: 10px;\n  }\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n  border: 1px solid black;\n\n  @media (max-width: 500px) {\n    font-size: 16px;\n    margin-bottom: 10px;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -140,7 +140,7 @@ var _jsxFileName = "/Users/irepair/Desktop/Dev/Web Dev/Projects/rona/components/
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: #f2f2f2;\n  font-size: 2rem;\n  padding: 2rem;\n  border-radius: 2rem;\n  display: grid;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n\n  @media (max-width: 400px) {\n    font-size: 1.2rem;\n    padding: 1rem;\n  }\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: #f2f2f2;\n  font-size: 2rem;\n  padding: 2rem;\n  border-radius: 2rem;\n  display: grid;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n\n  @media (max-width: 500px) {\n    font-size: 1.2rem;\n    padding: 1rem;\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -150,7 +150,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  grid-gap: 1rem;\n\n  @media (max-width: 400px) {\n    grid-template-columns: repeat(1, 1fr)\n  }\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  grid-gap: 1rem;\n\n  @media (max-width: 500px) {\n    grid-template-columns: repeat(1, 1fr)\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;

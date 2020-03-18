@@ -119,7 +119,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const SelectInput = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.select`
   border: 1px solid black;
 
-  @media (max-width:400px) {
+  @media (max-width: 500px) {
     font-size: 16px;
     margin-bottom: 10px;
   }
@@ -226,7 +226,7 @@ const StatGrid = styled_components__WEBPACK_IMPORTED_MODULE_4___default.a.div`
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
 
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     grid-template-columns: repeat(1, 1fr)
   }
 `;
@@ -240,7 +240,7 @@ const StatBlock = styled_components__WEBPACK_IMPORTED_MODULE_4___default.a.div`
   justify-content: center;
   text-align: center;
 
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     font-size: 1.2rem;
     padding: 1rem;
   }
