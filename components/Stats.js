@@ -9,7 +9,9 @@ const StatGrid = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
 
-  
+  @media (max-width: 400px) {
+    grid-template-columns: repeat(1, 1fr)
+  }
 `;
 
 const StatBlock = styled.div`
@@ -21,6 +23,11 @@ const StatBlock = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
+
+  @media (max-width: 400px) {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
 `;
 
 export default function Stats({url}) {

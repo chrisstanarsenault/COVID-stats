@@ -11,68 +11,84 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CountrySelector; });
 /* harmony import */ var _babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _utils_useStats__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/useStats */ "./utils/useStats.js");
-/* harmony import */ var _Stats__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Stats */ "./components/Stats.js");
+/* harmony import */ var _babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _utils_useStats__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/useStats */ "./utils/useStats.js");
+/* harmony import */ var _Stats__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Stats */ "./components/Stats.js");
+
 
 var _jsxFileName = "/Users/irepair/Desktop/Dev/Web Dev/Projects/rona/components/CountrySelector.js";
 
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+
+function _templateObject() {
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n  border: 1px solid black;\n\n  @media (max-width:400px) {\n    font-size: 16px;\n    margin-bottom: 10px;\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
 
 
 
+
+
+var SelectInput = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].select(_templateObject());
 function CountrySelector() {
-  var _useStats = Object(_utils_useStats__WEBPACK_IMPORTED_MODULE_2__["default"])('https://covid19.mathdro.id/api/countries'),
+  var _useStats = Object(_utils_useStats__WEBPACK_IMPORTED_MODULE_4__["default"])('https://covid19.mathdro.id/api/countries'),
       countries = _useStats.stats,
       loading = _useStats.loading,
       error = _useStats.error;
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])('CAN'),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])('CAN'),
       selectedCountry = _useState[0],
       setSelectedCountry = _useState[1];
 
   if (!countries) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 21
     },
     __self: this
   }, "Loading...");
   if (loading) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 22
     },
     __self: this
   }, "Loading...");
   if (error) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 23
     },
     __self: this
   }, "Loading...");
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 26
     },
     __self: this
   }, __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 27
     },
     __self: this
-  }, "Currently Showing ", selectedCountry), __jsx("select", {
+  }, "Currently Showing ", selectedCountry), __jsx(SelectInput, {
     onChange: function onChange(e) {
       setSelectedCountry(e.target.value);
     },
     value: selectedCountry,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 28
     },
     __self: this
   }, Object.entries(countries.countries).map(function (_ref, index) {
@@ -85,15 +101,15 @@ function CountrySelector() {
       value: countries.iso3[code],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21
+        lineNumber: 32
       },
       __self: this
     }, country);
-  })), __jsx(_Stats__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  })), __jsx(_Stats__WEBPACK_IMPORTED_MODULE_5__["default"], {
     url: "https://covid19.mathdro.id/api/countries/".concat(selectedCountry),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 35
     },
     __self: this
   }));
@@ -124,7 +140,7 @@ var _jsxFileName = "/Users/irepair/Desktop/Dev/Web Dev/Projects/rona/components/
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: #f2f2f2;\n  font-size: 2rem;\n  padding: 2rem;\n  border-radius: 2rem;\n  display: grid;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: #f2f2f2;\n  font-size: 2rem;\n  padding: 2rem;\n  border-radius: 2rem;\n  display: grid;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n\n  @media (max-width: 400px) {\n    font-size: 1.2rem;\n    padding: 1rem;\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -134,7 +150,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  grid-gap: 1rem;\n\n  \n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  grid-gap: 1rem;\n\n  @media (max-width: 400px) {\n    grid-template-columns: repeat(1, 1fr)\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -158,77 +174,77 @@ function Stats(_ref) {
   if (!stats) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 35
     },
     __self: this
   }, "Loading...");
   return __jsx(StatGrid, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 38
     },
     __self: this
   }, __jsx(StatBlock, {
     className: "statBlock",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 39
     },
     __self: this
   }, __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 40
     },
     __self: this
   }, "Confirmed:"), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 41
     },
     __self: this
   }, stats.confirmed.value)), __jsx(StatBlock, {
     className: "statBlock",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 44
     },
     __self: this
   }, __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 45
     },
     __self: this
   }, "Deaths:"), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 46
     },
     __self: this
   }, stats.deaths.value)), __jsx(StatBlock, {
     className: "statBlock",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 49
     },
     __self: this
   }, __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 50
     },
     __self: this
   }, "Recovered:"), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 51
     },
     __self: this
   }, stats.recovered.value)), __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 54
     },
     __self: this
   }, "Last Updated: ", Object(_utils_convertDate__WEBPACK_IMPORTED_MODULE_4__["default"])(stats.lastUpdate.substring(0, 10)), " @ ", Object(_utils_convertTime__WEBPACK_IMPORTED_MODULE_3__["default"])(stats.lastUpdate.substring(11, 16))));
