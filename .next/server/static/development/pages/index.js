@@ -109,7 +109,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _utils_useStats__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/useStats */ "./utils/useStats.js");
 /* harmony import */ var _Stats__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Stats */ "./components/Stats.js");
-var _jsxFileName = "/Users/irepair/Desktop/Dev/Web Dev/Projects/rona/components/CountrySelector.js";
+var _jsxFileName = "/Users/irepair/Desktop/Put back on computer/rona/components/CountrySelector.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -164,32 +164,14 @@ function CountrySelector() {
   }, __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
-  }, "Currently Showing ", selectedCountry), __jsx(SelectInput, {
-    onChange: e => {
-      setSelectedCountry(e.target.value);
-    },
-    value: selectedCountry,
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 28
     },
     __self: this
-  }, Object.entries(countries.countries).map(([country, code], index) => __jsx("option", {
-    key: code + "-" + index,
-    value: countries.iso3[code],
+  }, "Currently Showing Canada"), __jsx(_Stats__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    url: `https://covid19.mathdro.id/api/countries/CAN`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  }, country))), __jsx(_Stats__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    url: `https://covid19.mathdro.id/api/countries/${selectedCountry}`,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 36
     },
     __self: this
   }));
@@ -214,7 +196,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_convertDate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/convertDate */ "./utils/convertDate.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "/Users/irepair/Desktop/Dev/Web Dev/Projects/rona/components/Stats.js";
+var _jsxFileName = "/Users/irepair/Desktop/Put back on computer/rona/components/Stats.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -348,7 +330,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_CountrySelector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/CountrySelector */ "./components/CountrySelector.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/irepair/Desktop/Dev/Web Dev/Projects/rona/pages/index.js";
+var _jsxFileName = "/Users/irepair/Desktop/Put back on computer/rona/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -525,7 +507,7 @@ function useStats(url) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/irepair/Desktop/Dev/Web Dev/Projects/rona/pages/index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! /Users/irepair/Desktop/Put back on computer/rona/pages/index.js */"./pages/index.js");
 
 
 /***/ }),

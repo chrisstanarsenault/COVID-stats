@@ -24,15 +24,17 @@ export default function CountrySelector() {
 
   return (
     <div>
-      <h2>Currently Showing {selectedCountry}</h2>
-      <SelectInput onChange={e => {
+      {/* <h2>Currently Showing {selectedCountry}</h2> */}
+      <h2>Currently Showing Canada</h2>
+      {/* <SelectInput onChange={e => {
         setSelectedCountry(e.target.value);
       }} value={selectedCountry}>
         {Object.entries(countries.countries).map(([country, code], index) => (
           <option key={code + "-" + index} value={countries.iso3[code]}>{country}</option>
         ))}
-      </SelectInput>
-      <Stats url={`https://covid19.mathdro.id/api/countries/${selectedCountry}`} />
+      </SelectInput> */}
+      <Stats url={`https://covid19.mathdro.id/api/countries/CAN`} />
+      {/* <Stats url={`https://covid19.mathdro.id/api/countries/${selectedCountry}`} /> */}
     </div>
   )
 
